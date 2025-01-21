@@ -41,7 +41,7 @@ const ChatList = () => {
     const fetchMatches = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5000/matches', {
+        const response = await axios.get('http://localhost:5001/matches', {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
           }

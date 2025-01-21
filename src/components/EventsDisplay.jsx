@@ -22,7 +22,7 @@ const EventsDisplay = ({ events }) => {
       }
 
       const response = await axios.post(
-        'http://localhost:5000/matchmake', 
+        'http://localhost:5001/matchmake', 
         { eventId },
         {
           headers: {
@@ -54,7 +54,7 @@ const EventsDisplay = ({ events }) => {
     try {
       // Check if there are potential matches before navigating
       const response = await axios.get(
-        `http://localhost:5000/matchmaking/potential-matches/${eventId}`,
+        `http://localhost:5001/matchmaking/potential-matches/${eventId}`,
         {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`

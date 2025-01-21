@@ -72,7 +72,7 @@ const Dashboard = () => {
       const { latitude, longitude } = position.coords;
       
       // Then fetch events with the location
-      const response = await axios.get('http://localhost:5000/events/nearby', {
+      const response = await axios.get('http://localhost:5001/events/nearby', {
         params: {
           latitude,
           longitude,
@@ -119,7 +119,7 @@ const Dashboard = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await axios.get(`http://localhost:5000/event/search?query=${searchQuery}&countryCode=${countryCode}`, {
+      const response = await axios.get(`http://localhost:5001/event/search?query=${searchQuery}&countryCode=${countryCode}`, {
         headers: { 
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }

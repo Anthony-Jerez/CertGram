@@ -87,7 +87,7 @@ const ProfilePage = () => {
 
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/profile', {
+        const response = await axios.get('http://localhost:5001/profile', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -145,7 +145,7 @@ const ProfilePage = () => {
           throw new Error('No authentication token found');
         }
         
-        const uploadResponse = await axios.post('http://localhost:5000/upload', formData, {
+        const uploadResponse = await axios.post('http://localhost:5001/upload', formData, {
           headers: {
             'Content-Type': 'multipart/form-data',
             Authorization: `Bearer ${token}`
@@ -203,7 +203,7 @@ const ProfilePage = () => {
           updateData[fieldName] = currentValue;
       }
 
-      await axios.patch('http://localhost:5000/profile', updateData, {
+      await axios.patch('http://localhost:5001/profile', updateData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }
@@ -290,7 +290,7 @@ const ProfilePage = () => {
         throw new Error('No authentication token found');
       }
 
-      const response = await axios.patch('http://localhost:5000/profile', data, {
+      const response = await axios.patch('http://localhost:5001/profile', data, {
         headers: {
           Authorization: `Bearer ${token}`
         }

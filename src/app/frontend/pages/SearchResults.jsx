@@ -39,7 +39,7 @@ const SearchResults = () => {
     setError(null);
     
     try {
-      const response = await axios.get(`http://localhost:5000/event/search`, {
+      const response = await axios.get(`http://localhost:5001/event/search`, {
         params: {
           query: searchQuery,
           countryCode: countryCode
@@ -66,7 +66,7 @@ const SearchResults = () => {
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         try {
-          const response = await axios.get('http://localhost:5000/events/nearby', {
+          const response = await axios.get('http://localhost:5001/events/nearby', {
             params: {
               latitude: position.coords.latitude,
               longitude: position.coords.longitude,

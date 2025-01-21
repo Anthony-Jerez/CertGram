@@ -33,7 +33,7 @@ const Chat = ({ matchId, otherUser }) => {
 
   const fetchMessages = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/chat/${matchId}`, {
+      const response = await axios.get(`http://localhost:5001/chat/${matchId}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`
         }
@@ -50,7 +50,7 @@ const Chat = ({ matchId, otherUser }) => {
     if (!newMessage.trim()) return;
 
     try {
-      await axios.post(`http://localhost:5000/chat/${matchId}`, {
+      await axios.post(`http://localhost:5001/chat/${matchId}`, {
         content: newMessage
       }, {
         headers: {

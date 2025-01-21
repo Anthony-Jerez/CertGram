@@ -22,7 +22,7 @@ const Login = () => {
     setLoading(true);
     try {
       console.log('Attempting login...');
-      const response = await axios.post('http://localhost:5000/login', data);
+      const response = await axios.post('http://localhost:5001/login', data);
       console.log('Login response:', response.data);
 
       // Store the token

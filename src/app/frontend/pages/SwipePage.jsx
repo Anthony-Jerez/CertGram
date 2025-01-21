@@ -34,7 +34,7 @@ const SwipePage = () => {
       console.log('Fetching matches for event:', eventId);
 
       const response = await axios.get(
-        `http://localhost:5000/matchmaking/potential-matches/${eventId}`,
+        `http://localhost:5001/matchmaking/potential-matches/${eventId}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`
@@ -72,7 +72,7 @@ const SwipePage = () => {
 
   const handleSwipe = async (direction) => {
     try {
-      await axios.post('http://localhost:5000/matchmaking/swipe', {
+      await axios.post('http://localhost:5001/matchmaking/swipe', {
         eventId,
         matchUserId: potentialMatches[currentIndex].userId,
         direction
