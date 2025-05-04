@@ -83,6 +83,12 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## 🎥 Project Demo
+
+[![CertGram Demo](https://img.youtube.com/vi/HfxFGHoL0mY/0.jpg)](https://www.youtube.com/watch?v=HfxFGHoL0mY)
+
+Click the image above to watch a short demo of CertGram in action!
+
 ## 📄 License
 
 ISC License
